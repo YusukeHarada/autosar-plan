@@ -24,54 +24,62 @@
 
 ### 戦略・提案
 
-| ファイル | 内容 | 対象読者 | ステータス |
-|---|---|---|---|
-| [proposal.md](proposal.md) | 社内提案資料（なぜ変えるべきか） | 管理職・幹部 | Draft |
-| [sdv.md](sdv.md) | SDVの概念と建設機械への考察 | 開発部門・経営層 | Draft |
-| [roadmap.md](roadmap.md) | フェーズ別ロードマップ・必要技術・人材 | 開発部門・管理職 | Draft |
-| [cost-budget.md](cost-budget.md) | ツール・委託・認証の費用試算とROI分析 | 経営層・管理職 | Draft |
+| ファイル | 内容 |
+|---|---|
+| [proposal.md](proposal.md) | 社内提案資料（なぜ変えるべきか） |
+| [sdv.md](sdv.md) | SDVの概念と建設機械への考察 |
+| [roadmap.md](roadmap.md) | フェーズ別ロードマップ・必要技術・人材 |
+| [cost-budget.md](cost-budget.md) | ツール・委託・認証の費用試算とROI分析 |
 
 ### 外部委託・選定・移行
 
-| ファイル | 内容 | 対象読者 | ステータス |
-|---|---|---|---|
-| [vendor-selection.md](vendor-selection.md) | 委託先選定基準・PoC評価 | 技術担当者 | Draft |
-| [migration-plan.md](migration-plan.md) | 既存内製コードからAUTOSARへの移行計画 | 開発マネージャー・技術リード | Draft |
+| ファイル | 内容 |
+|---|---|
+| [vendor-selection.md](vendor-selection.md) | 委託先選定基準・PoC評価 |
+| [migration-plan.md](migration-plan.md) | 既存内製コードからAUTOSARへの移行計画 |
 
 ### 技術仕様
 
-| ファイル | 内容 | 対象読者 | ステータス |
-|---|---|---|---|
-| [requirements-spec.md](requirements-spec.md) | AUTOSARを前提とした要求仕様の作り方 | 技術担当者 | Draft |
-| [communication-spec.md](communication-spec.md) | CAN・Ethernet・J1939通信仕様の書き方 | 技術担当者・委託先 | Draft |
-| [toolchain.md](toolchain.md) | AUTOSARコード生成ツールチェーン | 技術担当者 | Draft |
-| [autosar-modules.md](autosar-modules.md) | AUTOSARモジュール解説（SOME/IP・SoAD等） | 技術担当者 | Draft |
-| [diagnostics.md](diagnostics.md) | UDS・診断通信（Dcm・Dem・J1939 DM1/DM2） | 技術担当者 | Draft |
+| ファイル | 内容 |
+|---|---|
+| [requirements-spec.md](requirements-spec.md) | AUTOSARを前提とした要求仕様の作り方 |
+| [communication-spec.md](communication-spec.md) | CAN・Ethernet・J1939通信仕様の書き方 |
+| [toolchain.md](toolchain.md) | AUTOSARコード生成ツールチェーン |
+| [autosar-modules.md](autosar-modules.md) | AUTOSARモジュール解説（SOME/IP・SoAD等） |
+| [diagnostics.md](diagnostics.md) | UDS・診断通信（Dcm・Dem・J1939 DM1/DM2） |
 
 ### アーキテクチャ
 
-| ファイル | 内容 | 対象読者 | ステータス |
-|---|---|---|---|
-| [architecture.md](architecture.md) | 将来アーキテクチャ・セキュリティ・ゲートウェイ設計 | 技術担当者・アーキテクト | Draft |
-| [hypervisor.md](hypervisor.md) | SoC Hypervisorによる統合アーキテクチャ | 技術担当者・アーキテクト | Draft |
-| [cloud-connectivity.md](cloud-connectivity.md) | クラウド連携・OTA・IoT Core | 技術担当者・アーキテクト | Draft |
-| [digital-twin.md](digital-twin.md) | デジタルツインの概念・建設機械への適用 | 開発部門・経営層 | Draft |
+| ファイル | 内容 |
+|---|---|
+| [architecture.md](architecture.md) | 将来アーキテクチャ・セキュリティ・ゲートウェイ設計 |
+| [hypervisor.md](hypervisor.md) | SoC Hypervisorによる統合アーキテクチャ |
+| [cloud-connectivity.md](cloud-connectivity.md) | クラウド連携・OTA・IoT Core |
+| [digital-twin.md](digital-twin.md) | デジタルツインの概念・建設機械への適用 |
 
 ### 規格対応
 
-| ファイル | 内容 | 対象読者 | ステータス |
-|---|---|---|---|
-| [functional-safety.md](functional-safety.md) | ISO 25119のHARA・Safety Plan・証跡管理実施ガイド | 技術担当者・機能安全担当 | Draft |
-| [cybersecurity.md](cybersecurity.md) | ISO/SAE 21434のTARA・SecOC・Linuxセキュリティ実施ガイド | 技術担当者 | Draft |
+| ファイル | 内容 |
+|---|---|
+| [functional-safety.md](functional-safety.md) | ISO 25119のHARA・Safety Plan・証跡管理実施ガイド |
+| [cybersecurity.md](cybersecurity.md) | ISO/SAE 21434のTARA・SecOC・Linuxセキュリティ実施ガイド |
 
 ### 開発プロセス・品質
 
-| ファイル | 内容 | 対象読者 | ステータス |
-|---|---|---|---|
-| [dev-process.md](dev-process.md) | CI/CD・アジャイル・TDD/ATDD・段階的整備 | 開発部門 | Draft |
-| [verification-environment.md](verification-environment.md) | MIL/SIL/HIL検証環境・テスト自動化 | 技術担当者 | Draft |
-| [automation.md](automation.md) | コード生成・テスト・トレーサビリティの自動化 | 技術担当者 | Draft |
-| [shift-left.md](shift-left.md) | シフトレフトの考え方・具体的手法・AI活用 | 開発部門 | Draft |
+| ファイル | 内容 |
+|---|---|
+| [dev-process.md](dev-process.md) | CI/CD・アジャイル・TDD/ATDD・段階的整備 |
+| [dev-process-standards.md](dev-process-standards.md) | ASPICE・Linux系プロセス標準の適用整理 |
+| [verification-environment.md](verification-environment.md) | MIL/SIL/HIL検証環境・テスト自動化 |
+| [automation.md](automation.md) | コード生成・テスト・トレーサビリティの自動化 |
+| [shift-left.md](shift-left.md) | シフトレフトの考え方・具体的手法・AI活用 |
+
+### 知識整理・改善活動
+
+| ファイル | 内容 |
+|---|---|
+| [process-improvement.md](process-improvement.md) | 開発プロセス改善の過去・現在・これから |
+| [ai-utilization.md](ai-utilization.md) | 生成AI・AIエージェントの活用 |
 
 ---
 
