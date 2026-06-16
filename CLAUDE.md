@@ -10,7 +10,7 @@
 
 ---
 
-## ドキュメント構成（全29ファイル）
+## ドキュメント構成（全34ファイル）
 
 ### 戦略・提案
 
@@ -34,14 +34,18 @@
 |---|---|---|
 | `requirements-spec.md` | AUTOSARを前提とした要求仕様の作り方 | 技術担当者・委託先 |
 | `communication-spec.md` | CAN・Ethernet・J1939通信仕様の書き方 | 技術担当者・委託先 |
+| `can-fd-tsn.md` | CAN FD / Ethernet TSN 技術概念・使い分け・建設機械推奨構成 | 技術担当者・委託先 |
 | `toolchain.md` | AUTOSARコード生成ツールチェーン（DaVinci・EB tresos等） | 技術担当者 |
 | `autosar-modules.md` | AUTOSARモジュール解説（SOME/IP・SoAD・SOA等）※SOAセクション追加済み | 技術担当者 |
+| `adaptive-autosar.md` | Adaptive AUTOSAR主要モジュール（ara::com・ara::exec等）・2028年以降検討準備 | 技術担当者 |
 | `diagnostics.md` | UDS・診断通信（Dcm・Dem・J1939 DM1/DM2・DoCAN・DoIP・SOVD）※セクション9〜11追加済み | 技術担当者 |
+| `bootloader.md` | Bootloader / フラッシュプログラミング・UDSシーケンス・OTA連携 | 技術担当者・委託先 |
 
-### アーキテクチャ
+### アーキテクチャ・技術概念
 
 | ファイル | 内容 | 対象読者 |
 |---|---|---|
+| `ee-architecture.md` | E/Eアーキテクチャ変遷（分散型→ドメイン型→ゾーン型→集中型） | 技術担当者・アーキテクト |
 | `architecture.md` | 将来アーキテクチャ・セキュリティ・ゲートウェイ設計 | 技術担当者・アーキテクト |
 | `hypervisor.md` | SoC Hypervisorによる統合アーキテクチャ（QNX・XEN比較・デュアルSoC推奨理由） | 技術担当者・アーキテクト |
 | `cloud-connectivity.md` | クラウド連携・OTA・IoT Core | 技術担当者・アーキテクト |
@@ -52,6 +56,7 @@
 | ファイル | 内容 | 対象読者 |
 |---|---|---|
 | `functional-safety.md` | ISO 25119のHARA・Safety Plan・証跡管理実施ガイド | 技術担当者・安全担当 |
+| `iso26262-vs-iso25119.md` | ISO 26262 vs ISO 25119 の違い・委託先との共通言語 | 技術担当者・安全担当 |
 | `cybersecurity.md` | ISO/SAE 21434のTARA・SecOC・Linuxセキュリティ実施ガイド | 技術担当者 |
 
 ### 開発プロセス・品質
@@ -141,12 +146,13 @@
 - **SOVDは2030年以降の検討項目**：規格化途上。クラウド連携診断の将来像として把握しておく
 
 ### 未着手の検討候補トピック
-以下は「キーワードは出てくるが独立したまとめがない」状態。優先度の高いものから整理を進める。
 
-| トピック | 関連ファイル | 追加価値 |
-|---|---|---|
-| CAN FD / Ethernet TSN の技術概念 | `communication-spec.md`（仕様書の書き方はあるが技術解説がない） | ハード選定・委託先との仕様協議に必要 |
-| E/Eアーキテクチャ変遷（ドメイン型→ゾーン型→集中型） | `sdv.md`（一言のみ） | AUTOSARやSDV移行の「なぜ」の理解に直結 |
-| Bootloader / フラッシュプログラミング | `diagnostics.md`（OTA連携で少し言及） | OTA実装・UDS書込の詳細として重要 |
-| ISO 26262 vs ISO 25119 の違い | `functional-safety.md`（ISO 25119のみ） | 委託先（自動車業界出身）との共通言語 |
-| Adaptive AUTOSAR 主要モジュール（ara::com等） | `autosar-modules.md`（Classic中心） | 2028年以降の検討準備 |
+以下はすべて整理済み（2026年6月完了）。
+
+| トピック | 作成ファイル |
+|---|---|
+| CAN FD / Ethernet TSN の技術概念 | `can-fd-tsn.md` |
+| E/Eアーキテクチャ変遷（ドメイン型→ゾーン型→集中型） | `ee-architecture.md` |
+| Bootloader / フラッシュプログラミング | `bootloader.md` |
+| ISO 26262 vs ISO 25119 の違い | `iso26262-vs-iso25119.md` |
+| Adaptive AUTOSAR 主要モジュール（ara::com等） | `adaptive-autosar.md` |

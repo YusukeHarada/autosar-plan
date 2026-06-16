@@ -44,9 +44,12 @@
 |---|---|
 | [requirements-spec.md](requirements-spec.md) | AUTOSARを前提とした要求仕様の作り方 |
 | [communication-spec.md](communication-spec.md) | CAN・Ethernet・J1939通信仕様の書き方 |
+| [can-fd-tsn.md](can-fd-tsn.md) | CAN FD / Ethernet TSN 技術概念・建設機械への適用 |
 | [toolchain.md](toolchain.md) | AUTOSARコード生成ツールチェーン |
 | [autosar-modules.md](autosar-modules.md) | AUTOSARモジュール解説（SOME/IP・SoAD等） |
+| [adaptive-autosar.md](adaptive-autosar.md) | Adaptive AUTOSAR主要モジュール（ara::com等）・2028年以降の検討準備 |
 | [diagnostics.md](diagnostics.md) | UDS・診断通信（Dcm・Dem・J1939 DM1/DM2） |
+| [bootloader.md](bootloader.md) | Bootloader / フラッシュプログラミング・OTA連携 |
 
 ### アーキテクチャ
 
@@ -57,11 +60,18 @@
 | [cloud-connectivity.md](cloud-connectivity.md) | クラウド連携・OTA・IoT Core |
 | [digital-twin.md](digital-twin.md) | デジタルツインの概念・建設機械への適用 |
 
+### アーキテクチャ・技術概念
+
+| ファイル | 内容 |
+|---|---|
+| [ee-architecture.md](ee-architecture.md) | E/Eアーキテクチャ変遷（分散型→ドメイン型→ゾーン型→集中型） |
+
 ### 規格対応
 
 | ファイル | 内容 |
 |---|---|
 | [functional-safety.md](functional-safety.md) | ISO 25119のHARA・Safety Plan・証跡管理実施ガイド |
+| [iso26262-vs-iso25119.md](iso26262-vs-iso25119.md) | ISO 26262 vs ISO 25119 の違い・委託先との共通言語 |
 | [cybersecurity.md](cybersecurity.md) | ISO/SAE 21434のTARA・SecOC・Linuxセキュリティ実施ガイド |
 
 ### 開発プロセス・品質
