@@ -10,7 +10,7 @@
 
 ---
 
-## ドキュメント構成（全34ファイル）
+## ドキュメント構成（全35ファイル）
 
 ### 戦略・提案
 
@@ -39,6 +39,7 @@
 | `autosar-modules.md` | AUTOSARモジュール解説（SOME/IP・SoAD・SOA等）※SOAセクション追加済み | 技術担当者 |
 | `adaptive-autosar.md` | Adaptive AUTOSAR主要モジュール（ara::com・ara::exec等）・2028年以降検討準備 | 技術担当者 |
 | `diagnostics.md` | UDS・診断通信（Dcm・Dem・J1939 DM1/DM2・DoCAN・DoIP・SOVD）※セクション9〜11追加済み | 技術担当者 |
+| `j1939-detail.md` | J1939プロトコル技術詳解（PGN・SPN・DBC作成・AUTOSAR連携） | 技術担当者・委託先 |
 | `bootloader.md` | Bootloader / フラッシュプログラミング・UDSシーケンス・OTA連携 | 技術担当者・委託先 |
 
 ### アーキテクチャ・技術概念

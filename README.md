@@ -49,6 +49,7 @@
 | [autosar-modules.md](autosar-modules.md) | AUTOSARモジュール解説（SOME/IP・SoAD等） |
 | [adaptive-autosar.md](adaptive-autosar.md) | Adaptive AUTOSAR主要モジュール（ara::com等）・2028年以降の検討準備 |
 | [diagnostics.md](diagnostics.md) | UDS・診断通信（Dcm・Dem・J1939 DM1/DM2） |
+| [j1939-detail.md](j1939-detail.md) | J1939プロトコル技術詳解（PGN・SPN・DBC・AUTOSAR連携） |
 | [bootloader.md](bootloader.md) | Bootloader / フラッシュプログラミング・OTA連携 |
 
 ### アーキテクチャ
