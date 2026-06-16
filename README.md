@@ -29,12 +29,14 @@
 | [proposal.md](proposal.md) | 社内提案資料（なぜ変えるべきか） | 管理職・幹部 | Draft |
 | [sdv.md](sdv.md) | SDVの概念と建設機械への考察 | 開発部門・経営層 | Draft |
 | [roadmap.md](roadmap.md) | フェーズ別ロードマップ・必要技術・人材 | 開発部門・管理職 | Draft |
+| [cost-budget.md](cost-budget.md) | ツール・委託・認証の費用試算とROI分析 | 経営層・管理職 | Draft |
 
-### 外部委託・選定
+### 外部委託・選定・移行
 
 | ファイル | 内容 | 対象読者 | ステータス |
 |---|---|---|---|
 | [vendor-selection.md](vendor-selection.md) | 委託先選定基準・PoC評価 | 技術担当者 | Draft |
+| [migration-plan.md](migration-plan.md) | 既存内製コードからAUTOSARへの移行計画 | 開発マネージャー・技術リード | Draft |
 
 ### 技術仕様
 
@@ -54,6 +56,13 @@
 | [hypervisor.md](hypervisor.md) | SoC Hypervisorによる統合アーキテクチャ | 技術担当者・アーキテクト | Draft |
 | [cloud-connectivity.md](cloud-connectivity.md) | クラウド連携・OTA・IoT Core | 技術担当者・アーキテクト | Draft |
 | [digital-twin.md](digital-twin.md) | デジタルツインの概念・建設機械への適用 | 開発部門・経営層 | Draft |
+
+### 規格対応
+
+| ファイル | 内容 | 対象読者 | ステータス |
+|---|---|---|---|
+| [functional-safety.md](functional-safety.md) | ISO 25119のHARA・Safety Plan・証跡管理実施ガイド | 技術担当者・機能安全担当 | Draft |
+| [cybersecurity.md](cybersecurity.md) | ISO/SAE 21434のTARA・SecOC・Linuxセキュリティ実施ガイド | 技術担当者 | Draft |
 
 ### 開発プロセス・品質
 
