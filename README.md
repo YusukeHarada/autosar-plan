@@ -52,20 +52,16 @@
 | [j1939-detail.md](j1939-detail.md) | J1939プロトコル技術詳解（PGN・SPN・DBC・AUTOSAR連携） |
 | [bootloader.md](bootloader.md) | Bootloader / フラッシュプログラミング・OTA連携 |
 
-### アーキテクチャ
-
-| ファイル | 内容 |
-|---|---|
-| [architecture.md](architecture.md) | 将来アーキテクチャ・セキュリティ・ゲートウェイ設計 |
-| [hypervisor.md](hypervisor.md) | SoC Hypervisorによる統合アーキテクチャ |
-| [cloud-connectivity.md](cloud-connectivity.md) | クラウド連携・OTA・IoT Core |
-| [digital-twin.md](digital-twin.md) | デジタルツインの概念・建設機械への適用 |
-
 ### アーキテクチャ・技術概念
 
 | ファイル | 内容 |
 |---|---|
 | [ee-architecture.md](ee-architecture.md) | E/Eアーキテクチャ変遷（分散型→ドメイン型→ゾーン型→集中型） |
+| [vehicle-os.md](vehicle-os.md) | ビークルOS・オーケストレーション・CASE・ゾーンアーキ・セントラルECU |
+| [architecture.md](architecture.md) | 将来アーキテクチャ・セキュリティ・ゲートウェイ設計 |
+| [hypervisor.md](hypervisor.md) | SoC Hypervisorによる統合アーキテクチャ |
+| [cloud-connectivity.md](cloud-connectivity.md) | クラウド連携・OTA・IoT Core |
+| [digital-twin.md](digital-twin.md) | デジタルツインの概念・建設機械への適用 |
 
 ### 規格対応
 
@@ -82,9 +78,12 @@
 | [dev-process.md](dev-process.md) | CI/CD・アジャイル・TDD/ATDD・段階的整備 |
 | [dev-process-standards.md](dev-process-standards.md) | ASPICE・Linux系プロセス標準の適用整理 |
 | [verification-environment.md](verification-environment.md) | MIL/SIL/HIL検証環境・テスト自動化 |
+| [hil-sil-setup.md](hil-sil-setup.md) | SIL/HIL環境構築具体例・ツール設定・CI統合・フォルトインジェクション |
 | [automation.md](automation.md) | コード生成・テスト・トレーサビリティの自動化 |
 | [shift-left.md](shift-left.md) | シフトレフトの考え方・具体的手法・AI活用 |
 | [misra-c.md](misra-c.md) | MISRA-C準拠・コーディング標準・静的解析 要件定義 |
+| [secoc.md](secoc.md) | SecOC（Secure Onboard Communication）実装ガイド・MAC生成・鍵管理 |
+| [sw-requirements-template.md](sw-requirements-template.md) | 委託先向けソフトウェア要件仕様書（SRS）テンプレート |
 
 ### 知識整理・改善活動
 

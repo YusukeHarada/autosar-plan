@@ -10,7 +10,7 @@
 
 ---
 
-## ドキュメント構成（全35ファイル）
+## ドキュメント構成（全41ファイル）
 
 ### 戦略・提案
 
@@ -47,6 +47,7 @@
 | ファイル | 内容 | 対象読者 |
 |---|---|---|
 | `ee-architecture.md` | E/Eアーキテクチャ変遷（分散型→ドメイン型→ゾーン型→集中型） | 技術担当者・アーキテクト |
+| `vehicle-os.md` | ビークルOS・オーケストレーション・CASE・ゾーンアーキ・セントラルECU | 技術担当者・アーキテクト |
 | `architecture.md` | 将来アーキテクチャ・セキュリティ・ゲートウェイ設計 | 技術担当者・アーキテクト |
 | `hypervisor.md` | SoC Hypervisorによる統合アーキテクチャ（QNX・XEN比較・デュアルSoC推奨理由） | 技術担当者・アーキテクト |
 | `cloud-connectivity.md` | クラウド連携・OTA・IoT Core | 技術担当者・アーキテクト |
@@ -67,9 +68,12 @@
 | `dev-process.md` | CI/CD・アジャイル・TDD/ATDD・段階的整備 | 開発部門 |
 | `dev-process-standards.md` | ASPICE・Linux系プロセス標準の適用整理（現状課題・To-Be） | 開発部門・管理職 |
 | `verification-environment.md` | MIL/SIL/HIL検証環境・テスト自動化 | 技術担当者 |
+| `hil-sil-setup.md` | SIL/HIL環境構築具体例・ツール設定・CI統合・フォルトインジェクション | 技術担当者 |
 | `automation.md` | コード生成・テスト・トレーサビリティの自動化 | 技術担当者 |
 | `shift-left.md` | シフトレフトの考え方・具体的手法・AI活用 | 開発部門 |
 | `misra-c.md` | MISRA-C準拠・コーディング標準・静的解析 要件定義 | 技術担当者・委託先 |
+| `secoc.md` | SecOC実装ガイド（MAC生成・フレッシュネス・鍵管理・HSM連携） | 技術担当者・委託先 |
+| `sw-requirements-template.md` | 委託先向けソフトウェア要件仕様書（SRS）テンプレート | 技術担当者・委託先 |
 
 ### 知識整理・改善活動
 
