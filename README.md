@@ -3,7 +3,7 @@
 **対象読者：** 開発部門内関係者  
 **機密レベル：** 社外秘
 
-建設機械向けプラットフォームソフトウェアのAUTOSAR準拠・外部委託移行に関する検討資料。
+建設機械向けプラットフォームソフトウェアのAUTOSAR準拠・外部委託移行、およびSDV化に向けた総合検討資料。
 
 ---
 
@@ -14,46 +14,72 @@
 - 機能安全（ISO 25119）・セキュリティ規格への対応が必要だが、現状の内製体制では対応不可能
 - 仕様書・設計書・テストが存在しない状態で4〜5年の開発が蓄積されている
 - AUTOSARを自社で習得・導入するリソースがない
+- SDV化（自律施工・フリート管理・OTA）の流れが建設機械にも波及しつつある
 
-これらを踏まえ、**AUTOSAR準拠のプラットフォームを外部委託で構築する**方針への移行を検討している。
+これらを踏まえ、**Classic AUTOSAR（RTOS系）＋ Linuxミドルウェア（Linux系）のハイブリッド構成を外部委託で構築**し、段階的にSDV化を進める方針を検討している。
 
 ---
 
 ## ドキュメント一覧
 
+### 戦略・提案
+
 | ファイル | 内容 | 対象読者 | ステータス |
 |---|---|---|---|
-| [proposal.md](proposal.md) | 社内提案資料 | 管理職・幹部 | Draft |
-| [vendor-selection.md](vendor-selection.md) | 委託先選定基準 | 技術担当者 | Draft |
-| [requirements-spec.md](requirements-spec.md) | 要求仕様の作り方 | 技術担当者 | Draft |
-| [communication-spec.md](communication-spec.md) | 通信仕様の書き方 | 技術担当者・委託先 | Draft |
-| [toolchain.md](toolchain.md) | AUTOSARツールチェーン | 技術担当者 | Draft |
-| [sdv.md](sdv.md) | SDVの概念と建設機械への考察 | 開発部門・経営層 | Draft |
+| [proposal.md](proposal.md) | 社内提案資料（なぜ変えるべきか） | 管理職・幹部 | Draft |
+| [sdv.md](sdv.md) | SDVの概念と建設機械への考察・ロードマップ | 開発部門・経営層 | Draft |
+| [roadmap.md](roadmap.md) | フェーズ別ロードマップ・必要技術・人材 | 開発部門・管理職 | Draft |
+
+### 外部委託・選定
+
+| ファイル | 内容 | 対象読者 | ステータス |
+|---|---|---|---|
+| [vendor-selection.md](vendor-selection.md) | 委託先選定基準・PoC評価 | 技術担当者 | Draft |
+
+### 技術仕様
+
+| ファイル | 内容 | 対象読者 | ステータス |
+|---|---|---|---|
+| [requirements-spec.md](requirements-spec.md) | AUTOSARを前提とした要求仕様の作り方 | 技術担当者 | Draft |
+| [communication-spec.md](communication-spec.md) | CAN・Ethernet・J1939通信仕様の書き方 | 技術担当者・委託先 | Draft |
+| [toolchain.md](toolchain.md) | AUTOSARコード生成ツールチェーン | 技術担当者 | Draft |
+| [autosar-modules.md](autosar-modules.md) | AUTOSARモジュール解説（SOME/IP・SoAD等） | 技術担当者 | Draft |
+
+### アーキテクチャ
+
+| ファイル | 内容 | 対象読者 | ステータス |
+|---|---|---|---|
+| [hypervisor.md](hypervisor.md) | SoC Hypervisorによる統合アーキテクチャ | 技術担当者・アーキテクト | Draft |
+| [cloud-connectivity.md](cloud-connectivity.md) | クラウド連携・OTA・IoT Core | 技術担当者・アーキテクト | Draft |
+
+### 開発プロセス
+
+| ファイル | 内容 | 対象読者 | ステータス |
+|---|---|---|---|
+| [dev-process.md](dev-process.md) | CI/CD・アジャイル・TDD/ATDD・段階的整備 | 開発部門 | Draft |
 
 ---
 
 ## 移行方針の概要
 
 ```
-現状                          移行後
-─────────────────────────────────────────────────────────
-内製BSW・RTE（仕様書なし）   →  Classic AUTOSAR BSW・RTE（外部委託）
-内製Linuxミドルウェア         →  Adaptive AUTOSAR または Linuxミドルウェア（外部委託）
-独自通信定義                  →  DBC / ArXML による標準化された通信定義
-自社がコードを書く            →  自社は要求定義・受け入れ検証に専念（1〜2名体制）
+現状                          移行後（〜5年）             将来（5〜10年）
+────────────────────────────────────────────────────────────────────
+内製BSW・RTE（仕様書なし）  →  Classic AUTOSAR（外部委託）  →  安定稼働・機能安全認証
+内製Linuxミドルウェア       →  Linuxミドルウェア（外部委託）  →  Adaptive AUTOSAR検討
+独自通信定義                →  DBC + ArXML 標準化           →  SOME/IP フル活用
+クラウド未連携              →  Linux GW経由 IoT Core連携    →  OTA・予知保全・自律化
 ```
 
 ---
 
-## アクションプラン
+## フェーズ別アクションプラン
 
-| フェーズ | 期間 | 内容 | オーナー |
-|---|---|---|---|
-| **1. PoC** | 3〜6ヶ月 | 一機能をAUTOSAR準拠ベンダーに委託し実現性を検証 | 自社担当者1〜2名 |
-| **2. 移行計画策定** | PoC後3ヶ月 | ベンダー選定確定・移行優先順位・認証ロードマップ策定 | 自社担当者＋管理職 |
-| **3. 段階的移行** | 1〜2年 | RTOS系から優先移行、Linux系は順次移行 | 自社担当者＋委託先 |
-
-**PoCの判断基準：** 委託先の成果物品質・コスト・コミュニケーションを評価し、全体移行の可否を判断する。
+| フェーズ | 期間 | 主な取り組み |
+|---|---|---|
+| **Phase 1：土台整備** | 今〜2年 | 機能安全証跡整備・CI/CD構築・AUTOSAR PoC（Dcm+Dem）・フリート管理初版 |
+| **Phase 2：移行完了** | 2〜5年 | Classic AUTOSAR本格稼働・Linux GW経由クラウド連携・OTA（Linux系）・ISO 25119認証 |
+| **Phase 3：SDV化** | 5〜10年 | 半自律化・Hypervisor統合検討・Adaptive AUTOSAR評価・OTA（制御系） |
 
 ---
 
@@ -66,5 +92,5 @@
 | ISO/SAE 21434 | 自動車サイバーセキュリティ |
 | AUTOSAR Classic Platform | RTOS系ECU向けソフトウェア標準 |
 | AUTOSAR Adaptive Platform | Linux系ECU向けソフトウェア標準 |
-| J1939 | 建設・農業機械向けCAN上位プロトコル |
-| J1939-22 | J1939のCAN FD拡張 |
+| J1939 / J1939-22 | 建設・農業機械向けCAN上位プロトコル（CAN FD拡張版） |
+| SOME/IP | AUTOSAR標準のEthernetサービス通信プロトコル |
