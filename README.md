@@ -28,6 +28,7 @@
 | [requirements-spec.md](requirements-spec.md) | 要求仕様の作り方 | 技術担当者 | Draft |
 | [communication-spec.md](communication-spec.md) | 通信仕様の書き方 | 技術担当者・委託先 | Draft |
 | [toolchain.md](toolchain.md) | AUTOSARツールチェーン | 技術担当者 | Draft |
+| [sdv.md](sdv.md) | SDVの概念と建設機械への考察 | 開発部門・経営層 | Draft |
 
 ---
 
