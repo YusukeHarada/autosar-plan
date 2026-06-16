@@ -1,9 +1,9 @@
-# 建設機械向け AUTOSAR 移行検討リポジトリ
+# 建設機械向け 車載ソフトウェア開発 総合調査リポジトリ
 
 **対象読者：** 開発部門内関係者  
 **機密レベル：** 社外秘
 
-建設機械向けプラットフォームソフトウェアのAUTOSAR準拠・外部委託移行、およびSDV化に向けた総合検討資料。
+建設機械向け車載ソフトウェア開発の現状課題・将来技術・移行戦略に関する個人知識整理リポジトリ。AUTOSAR移行・SDV化・機能安全・サイバーセキュリティ・E/Eアーキテクチャ・クラウド連携など、車載ソフトウェア開発全般を対象とする。
 
 ---
 
@@ -16,7 +16,7 @@
 - AUTOSARを自社で習得・導入するリソースがない
 - SDV化（自律施工・フリート管理・OTA）の流れが建設機械にも波及しつつある
 
-これらを踏まえ、**Classic AUTOSAR（RTOS系）＋ Linuxミドルウェア（Linux系）のハイブリッド構成を外部委託で構築**し、段階的にSDV化を進める方針を検討している。
+これらを踏まえ、**Classic AUTOSAR（RTOS系）＋ Linuxミドルウェア（Linux系）のハイブリッド構成を外部委託で構築**し、段階的にSDV化を進める方針を検討している。またE/Eアーキテクチャ・ビークルOS・V2X・遠隔操作・デジタルツインといった将来技術の調査・整理も並行して進める。
 
 ---
 
@@ -44,14 +44,22 @@
 |---|---|
 | [requirements-spec.md](requirements-spec.md) | AUTOSARを前提とした要求仕様の作り方 |
 | [communication-spec.md](communication-spec.md) | CAN・Ethernet・J1939通信仕様の書き方 |
+| [can-fd-tsn.md](can-fd-tsn.md) | CAN FD / Ethernet TSN 技術概念・建設機械への適用 |
 | [toolchain.md](toolchain.md) | AUTOSARコード生成ツールチェーン |
 | [autosar-modules.md](autosar-modules.md) | AUTOSARモジュール解説（SOME/IP・SoAD等） |
+| [adaptive-autosar.md](adaptive-autosar.md) | Adaptive AUTOSAR主要モジュール（ara::com等）・2028年以降の検討準備 |
 | [diagnostics.md](diagnostics.md) | UDS・診断通信（Dcm・Dem・J1939 DM1/DM2） |
+| [j1939-detail.md](j1939-detail.md) | J1939プロトコル技術詳解（PGN・SPN・DBC・AUTOSAR連携） |
+| [bootloader.md](bootloader.md) | Bootloader / フラッシュプログラミング・OTA連携 |
 
-### アーキテクチャ
+### アーキテクチャ・技術概念
 
 | ファイル | 内容 |
 |---|---|
+| [ee-architecture.md](ee-architecture.md) | E/Eアーキテクチャ変遷（分散型→ドメイン型→ゾーン型→集中型） |
+| [vehicle-os.md](vehicle-os.md) | ビークルOS・オーケストレーション・CASE・ゾーンアーキ・セントラルECU |
+| [incar.md](incar.md) | In-car領域（コックピット・HMI・車内ネットワーク・統合コックピットコントローラ） |
+| [outcar.md](outcar.md) | Out-car領域（V2X・クラウド・フリート管理・遠隔操作・BIM/CIM連携） |
 | [architecture.md](architecture.md) | 将来アーキテクチャ・セキュリティ・ゲートウェイ設計 |
 | [hypervisor.md](hypervisor.md) | SoC Hypervisorによる統合アーキテクチャ |
 | [cloud-connectivity.md](cloud-connectivity.md) | クラウド連携・OTA・IoT Core |
@@ -62,6 +70,7 @@
 | ファイル | 内容 |
 |---|---|
 | [functional-safety.md](functional-safety.md) | ISO 25119のHARA・Safety Plan・証跡管理実施ガイド |
+| [iso26262-vs-iso25119.md](iso26262-vs-iso25119.md) | ISO 26262 vs ISO 25119 の違い・委託先との共通言語 |
 | [cybersecurity.md](cybersecurity.md) | ISO/SAE 21434のTARA・SecOC・Linuxセキュリティ実施ガイド |
 
 ### 開発プロセス・品質
@@ -71,8 +80,12 @@
 | [dev-process.md](dev-process.md) | CI/CD・アジャイル・TDD/ATDD・段階的整備 |
 | [dev-process-standards.md](dev-process-standards.md) | ASPICE・Linux系プロセス標準の適用整理 |
 | [verification-environment.md](verification-environment.md) | MIL/SIL/HIL検証環境・テスト自動化 |
+| [hil-sil-setup.md](hil-sil-setup.md) | SIL/HIL環境構築具体例・ツール設定・CI統合・フォルトインジェクション |
 | [automation.md](automation.md) | コード生成・テスト・トレーサビリティの自動化 |
 | [shift-left.md](shift-left.md) | シフトレフトの考え方・具体的手法・AI活用 |
+| [misra-c.md](misra-c.md) | MISRA-C準拠・コーディング標準・静的解析 要件定義 |
+| [secoc.md](secoc.md) | SecOC（Secure Onboard Communication）実装ガイド・MAC生成・鍵管理 |
+| [sw-requirements-template.md](sw-requirements-template.md) | 委託先向けソフトウェア要件仕様書（SRS）テンプレート |
 
 ### 知識整理・改善活動
 
